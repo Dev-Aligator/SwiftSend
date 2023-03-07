@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>loader.png</file>
+    <file>messages.png</file>
+    <file>process.png</file>
+    <file>telegram.png</file>
+    <file>default_face.png</file>
+    <file>swiftsend_nobg.png</file>
+    <file>swiftsend.ico</file>
+    <file>swiftsend_dark.ico</file>
+  </qresource>
+</RCC>
