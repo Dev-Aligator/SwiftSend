@@ -507,7 +507,38 @@ QPushButton {
          <property name="styleSheet">
           <string notr="true">* {
 	background-color: #1F243D;
-}</string>
+}
+
+
+/* QScrollBar:vertical {
+	border: none;
+    background: rgb(45, 45, 68);
+    width: 4px;
+	border-radius: 7px;
+ }
+
+QScrollBar::vertical:hover{
+	width:14px;
+}
+QScrollBar::handle:vertical {	
+	background-color: rgb(80, 80, 122);
+	min-height: 20px;
+	border-radius: 7px;
+}
+
+*/
+QScrollBar:vertical {
+       width: 8px;
+        background-color: transparent;
+        margin: 0px 0px 0px 0px;
+}
+  QScrollBar::handle:vertical {
+        background-color: rgb(80, 80, 122);
+        min-height: 20px;
+         border-radius: 10px;
+         margin: 0px 2px 0px 2px;
+  }
+</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <property name="spacing">
@@ -531,22 +562,7 @@ QPushButton {
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true">QScrollBar:vertical {
-	border: none;
-    background: rgb(45, 45, 68);
-    width: 4px;
-	border-radius: 7px;
- }
-
-QScrollBar::handle:vertical {	
-	background-color: rgb(80, 80, 122);
-	min-height: 30px;
-	border-radius: 7px;
-}
-
-
-
-</string>
+             <string notr="true"/>
             </property>
             <property name="widgetResizable">
              <bool>true</bool>
@@ -555,8 +571,8 @@ QScrollBar::handle:vertical {
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>0</y>
-               <width>289</width>
+               <y>-476</y>
+               <width>285</width>
                <height>1318</height>
               </rect>
              </property>

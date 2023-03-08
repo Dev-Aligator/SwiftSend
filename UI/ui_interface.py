@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfacelOgZKq.ui'
+## Form generated from reading UI file 'interfacekUfhOG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.8
 ##
@@ -12,7 +12,7 @@ from PySide2.QtCore import *  # type: ignore
 from PySide2.QtGui import *  # type: ignore
 from PySide2.QtWidgets import *  # type: ignore
 
-import UI.icon.resource_rc
+import resource_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -244,7 +244,38 @@ class Ui_MainWindow(object):
         self.target_tab.setMaximumSize(QSize(300, 16777215))
         self.target_tab.setStyleSheet(u"* {\n"
 "	background-color: #1F243D;\n"
-"}")
+"}\n"
+"\n"
+"\n"
+"/* QScrollBar:vertical {\n"
+"	border: none;\n"
+"    background: rgb(45, 45, 68);\n"
+"    width: 4px;\n"
+"	border-radius: 7px;\n"
+" }\n"
+"\n"
+"QScrollBar::vertical:hover{\n"
+"	width:14px;\n"
+"}\n"
+"QScrollBar::handle:vertical {	\n"
+"	background-color: rgb(80, 80, 122);\n"
+"	min-height: 20px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"*/\n"
+"QScrollBar:vertical {\n"
+"       width: 8px;\n"
+"        background-color: transparent;\n"
+"        margin: 0px 0px 0px 0px;\n"
+"}\n"
+"  QScrollBar::handle:vertical {\n"
+"        background-color: rgb(80, 80, 122);\n"
+"        min-height: 20px;\n"
+"         border-radius: 10px;\n"
+"         margin: 0px 2px 0px 2px;\n"
+"  }\n"
+"")
         self.verticalLayout_3 = QVBoxLayout(self.target_tab)
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -252,26 +283,11 @@ class Ui_MainWindow(object):
         self.scrollArea = QScrollArea(self.target_tab)
         self.scrollArea.setObjectName(u"scrollArea")
         self.scrollArea.viewport().setProperty("cursor", QCursor(Qt.PointingHandCursor))
-        self.scrollArea.setStyleSheet(u"QScrollBar:vertical {\n"
-"	border: none;\n"
-"    background: rgb(45, 45, 68);\n"
-"    width: 4px;\n"
-"	border-radius: 7px;\n"
-" }\n"
-"\n"
-"QScrollBar::handle:vertical {	\n"
-"	background-color: rgb(80, 80, 122);\n"
-"	min-height: 30px;\n"
-"	border-radius: 7px;\n"
-"}\n"
-"\n"
-"\n"
-"\n"
-"")
+        self.scrollArea.setStyleSheet(u"")
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 289, 1318))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -476, 285, 1318))
         self.verticalLayout_4 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.frame_3 = QFrame(self.scrollAreaWidgetContents)
