@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfacerKatLE.ui'
+## Form generated from reading UI file 'interfacelOgZKq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.8
 ##
@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
 
         self.account = QFrame(self.header)
         self.account.setObjectName(u"account")
-        self.account.setMinimumSize(QSize(221, 0))
+        self.account.setMinimumSize(QSize(300, 0))
         self.account.setCursor(QCursor(Qt.ArrowCursor))
         self.account.setMouseTracking(False)
         self.account.setStyleSheet(u"QPushButton { \n"
@@ -112,7 +112,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3 = QHBoxLayout(self.account)
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.horizontalLayout_3.setContentsMargins(9, -1, 20, -1)
+        self.horizontalLayout_3.setContentsMargins(80, 0, 20, 0)
         self.pushButton = QPushButton(self.account)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setMinimumSize(QSize(72, 72))
@@ -190,9 +190,10 @@ class Ui_MainWindow(object):
         self.pushButton_2.setMaximumSize(QSize(16777215, 16777215))
         font3 = QFont()
         font3.setFamily(u"DejaVu Sans Mono")
+        font3.setPointSize(12)
         self.pushButton_2.setFont(font3)
         icon2 = QIcon()
-        icon2.addFile(u":/icon/telegram.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u":/icon/telegram_white.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_2.setIcon(icon2)
         self.pushButton_2.setIconSize(QSize(32, 32))
 
@@ -206,7 +207,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.setMaximumSize(QSize(16777215, 16777215))
         self.pushButton_3.setFont(font3)
         icon3 = QIcon()
-        icon3.addFile(u":/icon/loader.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u":/icon/loader_white.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_3.setIcon(icon3)
         self.pushButton_3.setIconSize(QSize(32, 32))
 
@@ -218,9 +219,9 @@ class Ui_MainWindow(object):
         self.pushButton_4.setSizePolicy(sizePolicy2)
         self.pushButton_4.setMinimumSize(QSize(0, 50))
         self.pushButton_4.setMaximumSize(QSize(16777215, 16777215))
-        self.pushButton_4.setFont(font3)
+        self.pushButton_4.setFont(font1)
         icon4 = QIcon()
-        icon4.addFile(u":/icon/messages.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon4.addFile(u":/icon/message_white.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_4.setIcon(icon4)
         self.pushButton_4.setIconSize(QSize(32, 32))
 
@@ -244,6 +245,48 @@ class Ui_MainWindow(object):
         self.target_tab.setStyleSheet(u"* {\n"
 "	background-color: #1F243D;\n"
 "}")
+        self.verticalLayout_3 = QVBoxLayout(self.target_tab)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(0, 0, 5, 0)
+        self.scrollArea = QScrollArea(self.target_tab)
+        self.scrollArea.setObjectName(u"scrollArea")
+        self.scrollArea.viewport().setProperty("cursor", QCursor(Qt.PointingHandCursor))
+        self.scrollArea.setStyleSheet(u"QScrollBar:vertical {\n"
+"	border: none;\n"
+"    background: rgb(45, 45, 68);\n"
+"    width: 4px;\n"
+"	border-radius: 7px;\n"
+" }\n"
+"\n"
+"QScrollBar::handle:vertical {	\n"
+"	background-color: rgb(80, 80, 122);\n"
+"	min-height: 30px;\n"
+"	border-radius: 7px;\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"")
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents = QWidget()
+        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 289, 1318))
+        self.verticalLayout_4 = QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.frame_3 = QFrame(self.scrollAreaWidgetContents)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setMinimumSize(QSize(0, 1300))
+        self.frame_3.setStyleSheet(u"")
+        self.frame_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_4.addWidget(self.frame_3)
+
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+
+        self.verticalLayout_3.addWidget(self.scrollArea)
+
 
         self.horizontalLayout_4.addWidget(self.target_tab)
 

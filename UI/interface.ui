@@ -158,7 +158,7 @@ QPushButton {
         <widget class="QFrame" name="account">
          <property name="minimumSize">
           <size>
-           <width>221</width>
+           <width>300</width>
            <height>0</height>
           </size>
          </property>
@@ -186,10 +186,16 @@ QPushButton {
            <number>0</number>
           </property>
           <property name="leftMargin">
-           <number>9</number>
+           <number>80</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
           </property>
           <property name="rightMargin">
            <number>20</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
           <item>
            <widget class="QPushButton" name="pushButton">
@@ -371,6 +377,7 @@ QPushButton {
              <property name="font">
               <font>
                <family>DejaVu Sans Mono</family>
+               <pointsize>12</pointsize>
               </font>
              </property>
              <property name="text">
@@ -378,7 +385,7 @@ QPushButton {
              </property>
              <property name="icon">
               <iconset resource="icon/resource.qrc">
-               <normaloff>:/icon/telegram.png</normaloff>:/icon/telegram.png</iconset>
+               <normaloff>:/icon/telegram_white.png</normaloff>:/icon/telegram_white.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -411,6 +418,7 @@ QPushButton {
              <property name="font">
               <font>
                <family>DejaVu Sans Mono</family>
+               <pointsize>12</pointsize>
               </font>
              </property>
              <property name="text">
@@ -418,7 +426,7 @@ QPushButton {
              </property>
              <property name="icon">
               <iconset resource="icon/resource.qrc">
-               <normaloff>:/icon/loader.png</normaloff>:/icon/loader.png</iconset>
+               <normaloff>:/icon/loader_white.png</normaloff>:/icon/loader_white.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -451,6 +459,7 @@ QPushButton {
              <property name="font">
               <font>
                <family>DejaVu Sans Mono</family>
+               <pointsize>13</pointsize>
               </font>
              </property>
              <property name="text">
@@ -458,7 +467,7 @@ QPushButton {
              </property>
              <property name="icon">
               <iconset resource="icon/resource.qrc">
-               <normaloff>:/icon/messages.png</normaloff>:/icon/messages.png</iconset>
+               <normaloff>:/icon/message_white.png</normaloff>:/icon/message_white.png</iconset>
              </property>
              <property name="iconSize">
               <size>
@@ -500,6 +509,82 @@ QPushButton {
 	background-color: #1F243D;
 }</string>
          </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>5</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="cursor" stdset="0">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QScrollBar:vertical {
+	border: none;
+    background: rgb(45, 45, 68);
+    width: 4px;
+	border-radius: 7px;
+ }
+
+QScrollBar::handle:vertical {	
+	background-color: rgb(80, 80, 122);
+	min-height: 30px;
+	border-radius: 7px;
+}
+
+
+
+</string>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>289</width>
+               <height>1318</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <item>
+               <widget class="QFrame" name="frame_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>1300</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
