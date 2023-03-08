@@ -1,5 +1,11 @@
 <RCC>
   <qresource prefix="icon">
+    <file>message_white.png</file>
+    <file>telegram_white.png</file>
+    <file>loader_white.png</file>
+    <file>message_white.jpg</file>
+    <file>loader_white.png</file>
+    <file>telegram_white.png</file>
     <file>loader.png</file>
     <file>messages.png</file>
     <file>process.png</file>
