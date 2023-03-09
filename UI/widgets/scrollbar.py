@@ -6,27 +6,19 @@ class MyScrollArea(QScrollArea):
         self.setWidgetResizable(True)
         self.setStyleSheet("""
             QScrollBar:vertical {
-                width: 20px;
-                margin: 20px 0 20px 0;
-                border-radius: 10px;
-                background-color: rgba(255, 255, 255, 0.5);
+                width: 8px;
+                margin: 0px 0 0px 0;
+                border-radius: 5px;
+                background-color: transparent;
             }
             QScrollBar::handle:vertical {
                 background-color: rgba(255, 255, 255, 0.8);
-                border-radius: 10px;
+                border-radius: 5px;
                 min-height: 20px;
             }
             QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
-                height: 20px;
-                border-radius: 10px;
-                background-color: rgba(255, 255, 255, 0.5);
-            }
-            QScrollBar::add-line:vertical:hover, QScrollBar::sub-line:vertical:hover,
-            QScrollBar::add-line:vertical:pressed, QScrollBar::sub-line:vertical:pressed {
-                height: 30px;
-                margin-top: -10px;
-                margin-bottom: -10px;
-                background-color: rgba(255, 255, 255, 0.8);
+                height: 0px;
+                border: none;
             }
         """)
 
@@ -34,27 +26,14 @@ class MyScrollArea(QScrollArea):
         super().enterEvent(event)
         self.verticalScrollBar().setStyleSheet("""
             QScrollBar:vertical {
-                width: 30px;
-                margin: 10px 0 10px 0;
-                border-radius: 10px;
-                background-color: rgba(255, 255, 255, 0.5);
-            }
-            QScrollBar::handle:vertical {
-                background-color: rgba(255, 255, 255, 0.8);
-                border-radius: 10px;
-                min-height: 20px;
+                width: 8px;
+                margin: 0px 0 0px 0;
+                border-radius: 5px;
+                background-color: transparent;
             }
             QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
-                height: 20px;
-                border-radius: 10px;
-                background-color: rgba(255, 255, 255, 0.5);
-            }
-            QScrollBar::add-line:vertical:hover, QScrollBar::sub-line:vertical:hover,
-            QScrollBar::add-line:vertical:pressed, QScrollBar::sub-line:vertical:pressed {
-                height: 30px;
-                margin-top: -10px;
-                margin-bottom: -10px;
-                background-color: rgba(255, 255, 255, 0.8);
+                height: 0px;
+                border: none;
             }
         """)
 
@@ -62,87 +41,65 @@ class MyScrollArea(QScrollArea):
         super().leaveEvent(event)
         self.verticalScrollBar().setStyleSheet("""
             QScrollBar:vertical {
-                width: 20px;
-                margin: 20px 0 20px 0;
-                border-radius: 10px;
-                background-color: rgba(255, 255, 255, 0.5);
+                width: 5px;
+                margin: 0px 0 0px 0;
+                border-radius: 3px;
+                background-color: transparent;
             }
             QScrollBar::handle:vertical {
                 background-color: rgba(255, 255, 255, 0.8);
-                border-radius: 10px;
+                border-radius: 3px;
                 min-height: 20px;
             }
-            QScrollBar::add-line:vertical {
-            
+            QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+                height: 0px;
+                border: none;
             }
-                    QScrollBar::sub-line:vertical {
-            height: 20px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-        QScrollBar::add-line:vertical:hover, QScrollBar::sub-line:vertical:hover,
-        QScrollBar::add-line:vertical:pressed, QScrollBar::sub-line:vertical:pressed {
-            height: 30px;
-            margin-top: -10px;
-            margin-bottom: -10px;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
+
+                
     """)
 
     def mousePressEvent(self, event):
         super().mousePressEvent(event)
         self.verticalScrollBar().setStyleSheet("""
             QScrollBar:vertical {
-                width: 30px;
-                margin: 10px 0 10px 0;
-                border-radius: 10px;
-                background-color: rgba(255, 255, 255, 0.5);
+                width: 8px;
+                margin: 0px 0 0px 0;
+                border-radius: 5px;
+                background-color: transparent;
             }
         QScrollBar::handle:vertical {
             background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
+            border-radius: 5px;
             min-height: 20px;
         }
         QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
-            height: 20px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-        QScrollBar::add-line:vertical:hover, QScrollBar::sub-line:vertical:hover,
-        QScrollBar::add-line:vertical:pressed, QScrollBar::sub-line:vertical:pressed {
-            height: 30px;
-            margin-top: -10px;
-            margin-bottom: -10px;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
+                height: 0px;
+                border: none;
+            }
+
+
     """)
 
     def mouseReleaseEvent(self, event):
         super().mouseReleaseEvent(event)
         self.verticalScrollBar().setStyleSheet("""
         QScrollBar:vertical {
-            width: 20px;
-            margin: 20px 0 20px 0;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.5);
+            width: 5px;
+            margin: 0px 0 0px 0;
+            border-radius: 3px;
+            background-color: transparent;
         }
         QScrollBar::handle:vertical {
             background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
+            border-radius: 3px;
             min-height: 20px;
         }
         QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
-            height: 20px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-        QScrollBar::add-line:vertical:hover, QScrollBar::sub-line:vertical:hover,
-        QScrollBar::add-line:vertical:pressed, QScrollBar::sub-line:vertical:pressed {
-            height: 30px;
-            margin-top: -10px;
-            margin-bottom: -10px;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
+                height: 0px;
+                border: none;
+            }
+
     """)
 
 
