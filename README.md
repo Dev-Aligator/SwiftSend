@@ -20,7 +20,7 @@ SwiftSend is a fast and reliable file sharing app that allows users to transfer 
 
 To install SwiftSend, simply clone this repository to your local machine:
 ```
-git clone https://github.com/your-username/swiftsend.git
+    git clone https://github.com/your-username/swiftsend.git
 ```
 ## Usage
 To run SwiftSend, navigate to the project directory and run the following command:
