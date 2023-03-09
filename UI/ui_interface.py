@@ -8,12 +8,13 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
+from PySide2 import QtCore
 from PySide2.QtCore import *  # type: ignore
 from PySide2.QtGui import *  # type: ignore
 from PySide2.QtWidgets import *  # type: ignore
-
+from PySide2.QtWidgets import QWidget as QWidget
 import UI.icon.resource_rc
-
+from UI.widgets.scrollbar import MyScrollArea
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -280,10 +281,10 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 0, 5, 0)
-        self.scrollArea = QScrollArea(self.target_tab)
+        self.scrollArea = MyScrollArea(self.target_tab)
         self.scrollArea.setObjectName(u"scrollArea")
         self.scrollArea.viewport().setProperty("cursor", QCursor(Qt.PointingHandCursor))
-        self.scrollArea.setStyleSheet(u"")
+        ## self.scrollArea.setStyleSheet(u"")
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")

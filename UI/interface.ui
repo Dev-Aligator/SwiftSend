@@ -538,6 +538,8 @@ QScrollBar:vertical {
          border-radius: 10px;
          margin: 0px 2px 0px 2px;
   }
+
+
 </string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -571,7 +573,7 @@ QScrollBar:vertical {
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>-476</y>
+               <y>-116</y>
                <width>285</width>
                <height>1318</height>
               </rect>
