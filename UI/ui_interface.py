@@ -12,6 +12,7 @@ from PySide2.QtCore import *  # type: ignore
 from PySide2.QtGui import *  # type: ignore
 from PySide2.QtWidgets import *  # type: ignore
 
+
 import UI.icon.resource_rc
 from UI.widgets.scrollbar import MyScrollArea
 
@@ -22,6 +23,8 @@ class Ui_MainWindow(object):
         MainWindow.resize(1579, 944)
         MainWindow.setMinimumSize(QSize(0, 75))
         MainWindow.setStyleSheet(u"")
+        MainWindow.setWindowFlag(Qt.FramelessWindowHint)
+        MainWindow.setAttribute(Qt.WA_TranslucentBackground)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"")
@@ -77,7 +80,6 @@ class Ui_MainWindow(object):
         icon.addFile(u":/icon/swiftsend_nobg.png", QSize(), QIcon.Normal, QIcon.Off)
         self.icon_button.setIcon(icon)
         self.icon_button.setIconSize(QSize(64, 64))
-
         self.horizontalLayout_2.addWidget(self.icon_button)
 
         self.label_2 = QLabel(self.frame)
@@ -355,4 +357,3 @@ class Ui_MainWindow(object):
         self.label.setText(QCoreApplication.translate("MainWindow", u"Transfer Process", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Message", None))
     # retranslateUi
-

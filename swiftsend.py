@@ -1,6 +1,7 @@
 import sys
 
 from UI.ui_interface import *
+from UI.widgets.cascade import CascadeMenu
 
 
 class MainWindow(QMainWindow):
@@ -14,20 +15,9 @@ class MainWindow(QMainWindow):
         self.ui.pushButton_3.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.transfer_process_page))
         self.ui.pushButton_4.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.message_page))
         
-        self.menu = QMenu(self)
-        self.menu.addAction(QAction('Menu Item 1', self))
-        self.menu.addAction(QAction('Menu Item 2', self))
-        self.menu.addAction(QAction('Menu Item 3', self))
-        self.ui.icon_button.clicked.connect(self.show_menu)
-    def show_menu(self):
-        position = QPoint(self.ui.icon_button.geometry().left(), self.ui.icon_button.geometry().bottom())
-        self.menu.popup(self.mapToGlobal(position))
-
-        # Connect the menu to hide when it loses focus
-        self.menu.aboutToHide.connect(self.hide_menu)
-    def hide_menu(self):
-        if self.menu.isVisible():
-            self.hide_menu()
+        self.menu = CascadeMenu(self, self.ui.icon_button, ["S̲ettings", "A̲bout", "H̲elp", "E̲xit"])
+        
+        
 
 
 
