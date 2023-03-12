@@ -19,7 +19,13 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <property name="spacing">
      <number>0</number>
@@ -52,7 +58,11 @@
 QFrame{
 	border: none;
 }
-</string>
+
+#header {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;	
+}</string>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item alignment="Qt::AlignHCenter">
@@ -268,9 +278,7 @@ QPushButton {
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">*{
-
-}</string>
+       <string notr="true"/>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <property name="spacing">
@@ -305,6 +313,10 @@ QPushButton {
          <property name="styleSheet">
           <string notr="true">* {
 	background-color: #191F34; 
+}
+
+#left_tab {
+	border-bottom-left-radius: 10px;
 }</string>
          </property>
          <widget class="QFrame" name="left_button">
@@ -380,6 +392,9 @@ QPushButton {
                <pointsize>12</pointsize>
               </font>
              </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
              <property name="text">
               <string> FIle Transfer   </string>
              </property>
@@ -420,6 +435,9 @@ QPushButton {
                <family>DejaVu Sans Mono</family>
                <pointsize>12</pointsize>
               </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
              </property>
              <property name="text">
               <string> Transfer Process</string>
@@ -462,6 +480,9 @@ QPushButton {
                <pointsize>13</pointsize>
               </font>
              </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
              <property name="text">
               <string> Message        </string>
              </property>
@@ -488,6 +509,111 @@ QPushButton {
 	background-color: #1F243D;
 }</string>
          </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget">
+            <property name="currentIndex">
+             <number>2</number>
+            </property>
+            <widget class="QWidget" name="file_transfer_page">
+             <widget class="QLabel" name="label_3">
+              <property name="geometry">
+               <rect>
+                <x>420</x>
+                <y>330</y>
+                <width>171</width>
+                <height>51</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DejaVu Sans Mono</family>
+                <pointsize>13</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: red</string>
+              </property>
+              <property name="text">
+               <string notr="true">File Transfer</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="transfer_process_page">
+             <widget class="QLabel" name="label">
+              <property name="geometry">
+               <rect>
+                <x>450</x>
+                <y>340</y>
+                <width>171</width>
+                <height>51</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DejaVu Sans Mono</family>
+                <pointsize>13</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: red</string>
+              </property>
+              <property name="text">
+               <string>Transfer Process</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QWidget" name="message_page">
+             <widget class="QLabel" name="label_4">
+              <property name="geometry">
+               <rect>
+                <x>380</x>
+                <y>300</y>
+                <width>171</width>
+                <height>51</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>DejaVu Sans Mono</family>
+                <pointsize>13</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: red</string>
+              </property>
+              <property name="text">
+               <string>Message</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -507,40 +633,12 @@ QPushButton {
          <property name="styleSheet">
           <string notr="true">* {
 	background-color: #1F243D;
-}
-
-
-/* QScrollBar:vertical {
 	border: none;
-    background: rgb(45, 45, 68);
-    width: 4px;
-	border-radius: 7px;
- }
-
-QScrollBar::vertical:hover{
-	width:14px;
-}
-QScrollBar::handle:vertical {	
-	background-color: rgb(80, 80, 122);
-	min-height: 20px;
-	border-radius: 7px;
 }
 
-*/
-QScrollBar:vertical {
-       width: 8px;
-        background-color: transparent;
-        margin: 0px 0px 0px 0px;
-}
-  QScrollBar::handle:vertical {
-        background-color: rgb(80, 80, 122);
-        min-height: 20px;
-         border-radius: 10px;
-         margin: 0px 2px 0px 2px;
-  }
-
-
-</string>
+#target_tab{
+	border-bottom-right-radius: 10px;
+}</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <property name="spacing">
@@ -564,7 +662,7 @@ QScrollBar:vertical {
              <cursorShape>PointingHandCursor</cursorShape>
             </property>
             <property name="styleSheet">
-             <string notr="true"/>
+             <string notr="true">border-color: red;</string>
             </property>
             <property name="widgetResizable">
              <bool>true</bool>
@@ -573,14 +671,29 @@ QScrollBar:vertical {
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>-116</y>
-               <width>285</width>
-               <height>1318</height>
+               <y>0</y>
+               <width>281</width>
+               <height>1300</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_4">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
-               <widget class="QFrame" name="frame_3">
+               <widget class="QFrame" name="nameArea">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -588,7 +701,7 @@ QScrollBar:vertical {
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true"/>
+                 <string notr="true">border-left: 2px solid #05f7eb;</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>

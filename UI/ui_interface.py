@@ -1,28 +1,30 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interfacekUfhOG.ui'
+## Form generated from reading UI file 'interfaceCDfSWy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.8
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide2 import QtCore
 from PySide2.QtCore import *  # type: ignore
 from PySide2.QtGui import *  # type: ignore
 from PySide2.QtWidgets import *  # type: ignore
-from PySide2.QtWidgets import QWidget as QWidget
+
 import UI.icon.resource_rc
 from UI.widgets.scrollbar import MyScrollArea
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1579, 944)
         MainWindow.setMinimumSize(QSize(0, 75))
+        MainWindow.setStyleSheet(u"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
+        self.centralwidget.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -37,7 +39,11 @@ class Ui_MainWindow(object):
 "QFrame{\n"
 "	border: none;\n"
 "}\n"
-"")
+"\n"
+"#header {\n"
+"	border-top-left-radius: 10px;\n"
+"	border-top-right-radius: 10px;	\n"
+"}")
         self.horizontalLayout = QHBoxLayout(self.header)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.frame = QFrame(self.header)
@@ -150,9 +156,7 @@ class Ui_MainWindow(object):
         sizePolicy1.setVerticalStretch(0)
         sizePolicy1.setHeightForWidth(self.main_body.sizePolicy().hasHeightForWidth())
         self.main_body.setSizePolicy(sizePolicy1)
-        self.main_body.setStyleSheet(u"*{\n"
-"\n"
-"}")
+        self.main_body.setStyleSheet(u"")
         self.horizontalLayout_4 = QHBoxLayout(self.main_body)
         self.horizontalLayout_4.setSpacing(0)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
@@ -163,6 +167,10 @@ class Ui_MainWindow(object):
         self.left_tab.setMaximumSize(QSize(221, 16777215))
         self.left_tab.setStyleSheet(u"* {\n"
 "	background-color: #191F34; \n"
+"}\n"
+"\n"
+"#left_tab {\n"
+"	border-bottom-left-radius: 10px;\n"
 "}")
         self.left_button = QFrame(self.left_tab)
         self.left_button.setObjectName(u"left_button")
@@ -193,6 +201,7 @@ class Ui_MainWindow(object):
         font3.setFamily(u"DejaVu Sans Mono")
         font3.setPointSize(12)
         self.pushButton_2.setFont(font3)
+        self.pushButton_2.setCursor(QCursor(Qt.PointingHandCursor))
         icon2 = QIcon()
         icon2.addFile(u":/icon/telegram_white.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_2.setIcon(icon2)
@@ -207,6 +216,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.setMinimumSize(QSize(0, 50))
         self.pushButton_3.setMaximumSize(QSize(16777215, 16777215))
         self.pushButton_3.setFont(font3)
+        self.pushButton_3.setCursor(QCursor(Qt.PointingHandCursor))
         icon3 = QIcon()
         icon3.addFile(u":/icon/loader_white.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_3.setIcon(icon3)
@@ -221,6 +231,7 @@ class Ui_MainWindow(object):
         self.pushButton_4.setMinimumSize(QSize(0, 50))
         self.pushButton_4.setMaximumSize(QSize(16777215, 16777215))
         self.pushButton_4.setFont(font1)
+        self.pushButton_4.setCursor(QCursor(Qt.PointingHandCursor))
         icon4 = QIcon()
         icon4.addFile(u":/icon/message_white.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_4.setIcon(icon4)
@@ -236,6 +247,43 @@ class Ui_MainWindow(object):
         self.transfer_page.setStyleSheet(u"* {\n"
 "	background-color: #1F243D;\n"
 "}")
+        self.horizontalLayout_5 = QHBoxLayout(self.transfer_page)
+        self.horizontalLayout_5.setSpacing(0)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.stackedWidget = QStackedWidget(self.transfer_page)
+        self.stackedWidget.setObjectName(u"stackedWidget")
+        self.file_transfer_page = QWidget()
+        self.file_transfer_page.setObjectName(u"file_transfer_page")
+        self.label_3 = QLabel(self.file_transfer_page)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(420, 330, 171, 51))
+        self.label_3.setFont(font1)
+        self.label_3.setStyleSheet(u"background: red")
+        self.label_3.setText(u"File Transfer")
+        self.label_3.setAlignment(Qt.AlignCenter)
+        self.stackedWidget.addWidget(self.file_transfer_page)
+        self.transfer_process_page = QWidget()
+        self.transfer_process_page.setObjectName(u"transfer_process_page")
+        self.label = QLabel(self.transfer_process_page)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(450, 340, 171, 51))
+        self.label.setFont(font1)
+        self.label.setStyleSheet(u"background: red")
+        self.label.setAlignment(Qt.AlignCenter)
+        self.stackedWidget.addWidget(self.transfer_process_page)
+        self.message_page = QWidget()
+        self.message_page.setObjectName(u"message_page")
+        self.label_4 = QLabel(self.message_page)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(380, 300, 171, 51))
+        self.label_4.setFont(font1)
+        self.label_4.setStyleSheet(u"background: red")
+        self.label_4.setAlignment(Qt.AlignCenter)
+        self.stackedWidget.addWidget(self.message_page)
+
+        self.horizontalLayout_5.addWidget(self.stackedWidget)
+
 
         self.horizontalLayout_4.addWidget(self.transfer_page)
 
@@ -245,38 +293,12 @@ class Ui_MainWindow(object):
         self.target_tab.setMaximumSize(QSize(300, 16777215))
         self.target_tab.setStyleSheet(u"* {\n"
 "	background-color: #1F243D;\n"
-"}\n"
-"\n"
-"\n"
-"/* QScrollBar:vertical {\n"
 "	border: none;\n"
-"    background: rgb(45, 45, 68);\n"
-"    width: 4px;\n"
-"	border-radius: 7px;\n"
-" }\n"
-"\n"
-"QScrollBar::vertical:hover{\n"
-"	width:14px;\n"
-"}\n"
-"QScrollBar::handle:vertical {	\n"
-"	background-color: rgb(80, 80, 122);\n"
-"	min-height: 20px;\n"
-"	border-radius: 7px;\n"
 "}\n"
 "\n"
-"*/\n"
-"QScrollBar:vertical {\n"
-"       width: 8px;\n"
-"        background-color: transparent;\n"
-"        margin: 0px 0px 0px 0px;\n"
-"}\n"
-"  QScrollBar::handle:vertical {\n"
-"        background-color: rgb(80, 80, 122);\n"
-"        min-height: 20px;\n"
-"         border-radius: 10px;\n"
-"         margin: 0px 2px 0px 2px;\n"
-"  }\n"
-"")
+"#target_tab{\n"
+"	border-bottom-right-radius: 10px;\n"
+"}")
         self.verticalLayout_3 = QVBoxLayout(self.target_tab)
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -284,21 +306,22 @@ class Ui_MainWindow(object):
         self.scrollArea = MyScrollArea(self.target_tab)
         self.scrollArea.setObjectName(u"scrollArea")
         self.scrollArea.viewport().setProperty("cursor", QCursor(Qt.PointingHandCursor))
-        ## self.scrollArea.setStyleSheet(u"")
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, -476, 285, 1318))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 281, 1300))
         self.verticalLayout_4 = QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.frame_3 = QFrame(self.scrollAreaWidgetContents)
-        self.frame_3.setObjectName(u"frame_3")
-        self.frame_3.setMinimumSize(QSize(0, 1300))
-        self.frame_3.setStyleSheet(u"")
-        self.frame_3.setFrameShape(QFrame.StyledPanel)
-        self.frame_3.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.nameArea = QFrame(self.scrollAreaWidgetContents)
+        self.nameArea.setObjectName(u"nameArea")
+        self.nameArea.setMinimumSize(QSize(0, 1300))
+        self.nameArea.setStyleSheet(u"border-left: 2px solid #05f7eb;")
+        self.nameArea.setFrameShape(QFrame.StyledPanel)
+        self.nameArea.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_4.addWidget(self.frame_3)
+        self.verticalLayout_4.addWidget(self.nameArea)
 
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
@@ -314,6 +337,9 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
+        self.stackedWidget.setCurrentIndex(2)
+
+
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
@@ -326,5 +352,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u" FIle Transfer   ", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u" Transfer Process", None))
         self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u" Message        ", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Transfer Process", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"Message", None))
     # retranslateUi
 
